@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — PaperTrail</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: #f0f4f9;
+      color: #202124;
+      padding: 0;
+    }
+
+    header {
+      background: #4A6FA5;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    header img {
+      width: 36px;
+      height: 36px;
+    }
+
+    header a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    header a:hover {
+      opacity: 0.85;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 48px auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      padding: 48px 56px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      color: #4A6FA5;
+      margin-bottom: 8px;
+    }
+
+    .updated {
+      font-size: 13px;
+      color: #80868b;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #4A6FA5;
+      margin-top: 36px;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #eef2f8;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.75;
+      color: #3c4043;
+      margin-bottom: 14px;
+    }
+
+    .highlight {
+      background: #eef2f8;
+      border-left: 4px solid #4A6FA5;
+      padding: 14px 18px;
+      border-radius: 0 6px 6px 0;
+      margin: 24px 0;
+      font-size: 15px;
+      line-height: 1.7;
+      color: #3c4043;
+    }
+
+    a {
+      color: #4A6FA5;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px;
+      font-size: 13px;
+      color: #80868b;
+    }
+
+    footer a {
+      color: #4A6FA5;
+    }
+
+    @media (max-width: 600px) {
+      .container { margin: 20px; padding: 28px 24px; }
+      header { padding: 16px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="../icon128.png" alt="PaperTrail logo" />
+    <a href="/papertrail">PaperTrail</a>
+  </header>
+
+  <div class="container">
+
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: March 2026</p>
+
+    <div class="highlight">
+      PaperTrail does not collect, store, or transmit any personal data to any external server. Everything the extension does happens locally in your browser.
+    </div>
+
+    <h2>What PaperTrail Accesses</h2>
+    <p>PaperTrail reads revision history data from Google Docs using Google's built-in revision API — the same data that powers the native revision history feature inside Google Docs. This data includes document content at various points in time, edit timestamps, and anonymised author identifiers.</p>
+    <p>This data is accessed solely to display writing analysis results to the person using the extension. It is never transmitted to any server, stored beyond the current browser session, or shared with any third party.</p>
+
+    <h2>What PaperTrail Does Not Do</h2>
+    <p>PaperTrail does not collect any personal information. It does not track usage, send analytics, display advertising, or communicate with any external server of any kind. When you close the sidebar or navigate away from a document, all revision data is cleared from memory.</p>
+    <p>PaperTrail does not modify any Google Doc or leave any record of having been used on a document.</p>
+
+    <h2>Permissions</h2>
+    <p>PaperTrail requests the following Chrome permissions in order to function:</p>
+    <p><strong>activeTab and scripting</strong> — required to inject the revision analysis tool into the active Google Docs page.</p>
+    <p><strong>tabs</strong> — required to open the playback window in a new tab and to detect when the user is on a Google Docs or Google Classroom page.</p>
+    <p><strong>unlimitedStorage</strong> — required to temporarily hold revision data for large documents, which can contain tens of thousands of entries and exceed Chrome's default storage limit. This data is cleared when the session ends.</p>
+    <p><strong>Host permissions for docs.google.com and classroom.google.com</strong> — required to operate on Google Docs and Google Classroom pages.</p>
+
+    <h2>Google Classroom and Student Data</h2>
+    <p>PaperTrail respects the access permissions that Google enforces on all documents. It can only read revision history that the logged-in user already has permission to view. It does not access any student data beyond what is visible in the document's standard revision history.</p>
+    <p>Because no data leaves the browser, PaperTrail does not raise additional data governance concerns beyond those of Google Docs itself.</p>
+
+    <h2>Children's Privacy</h2>
+    <p>PaperTrail does not knowingly collect any information from anyone, including minors. The extension processes document revision data locally and discards it at the end of each session.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>If PaperTrail's data practices change in a future version — for example, if optional account features are introduced — this policy will be updated and the date above will reflect the change.</p>
+
+    <h2>Contact</h2>
+    <p>If you have any questions about this privacy policy or how PaperTrail handles data, you can reach us through the Chrome Web Store listing page.</p>
+
+  </div>
+
+  <footer>
+    <a href="/papertrail">← Back to PaperTrail</a>
+  </footer>
+
+</body>
+</html>
