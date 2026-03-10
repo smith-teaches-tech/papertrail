@@ -281,12 +281,11 @@
 <!-- ─── Compliance strip ──────────────────────────────────────────── -->
 <div class="compliance-strip">
   <div class="compliance-inner">
-    <span class="compliance-label">Compliance considerations</span>
-    <div class="cbadge"><span class="cbadge-icon">🔒</span><div class="cbadge-text"><strong>FERPA</strong><span>Conscious</span></div></div>
-    <div class="cbadge"><span class="cbadge-icon">🇨🇦</span><div class="cbadge-text"><strong>PIPEDA</strong><span>Considered</span></div></div>
-    <div class="cbadge"><span class="cbadge-icon">🇪🇺</span><div class="cbadge-text"><strong>GDPR</strong><span>Aware</span></div></div>
-    <div class="cbadge"><span class="cbadge-icon">🚫</span><div class="cbadge-text"><strong>Zero</strong><span>Student data</span></div></div>
-    <div class="cbadge"><span class="cbadge-icon">🏫</span><div class="cbadge-text"><strong>Ontario</strong><span>Based operator</span></div></div>
+    <span class="compliance-label">Self-assessed</span>
+    <div class="cbadge"><span class="cbadge-icon">🇺🇸</span><div class="cbadge-text"><strong>FERPA</strong><span>How it applies</span></div></div>
+    <div class="cbadge"><span class="cbadge-icon">🇨🇦</span><div class="cbadge-text"><strong>Canadian Privacy Law</strong><span>How it applies</span></div></div>
+    <div class="cbadge"><span class="cbadge-icon">🇪🇺</span><div class="cbadge-text"><strong>GDPR</strong><span>How it applies</span></div></div>
+    <div class="cbadge"><span class="cbadge-icon">🚫</span><div class="cbadge-text"><strong>Zero student data</strong><span>collected or stored</span></div></div>
   </div>
 </div>
 
@@ -367,9 +366,9 @@
 <section class="section" id="compliance">
   <div class="container">
     <div class="section-hdr">
-      <p class="eyebrow" style="color:var(--blue)">Regulatory Considerations</p>
-      <h2>FERPA, PIPEDA, GDPR — <em>plainly stated.</em></h2>
-      <p>We've summarized how each framework applies to PaperTrail's actual data practices. This is not legal advice; your institution's legal counsel should make final determinations.</p>
+      <p class="eyebrow" style="color:var(--blue)">Privacy Regulations</p>
+      <h2>How PaperTrail relates to <em>common privacy frameworks.</em></h2>
+      <p>This is a self-assessment based on how the product actually works. It is not legal advice — your institution's counsel should make final determinations for your context.</p>
     </div>
     <div class="reg-grid">
 
@@ -377,30 +376,27 @@
         <div class="reg-flag">🇺🇸</div>
         <h3>FERPA</h3>
         <div class="reg-subtitle">United States — Family Educational Rights and Privacy Act</div>
-        <p>FERPA protects personally identifiable information (PII) from education records. PaperTrail Inspect reads only revision metadata — not education records as defined by FERPA. StyleMatch processes text locally with no transmission.</p>
-        <p>For Verify: the teacher controls what text is submitted and whether it includes identifying information. PaperTrail recommends anonymizing student names from essay text before submitting. The submitted text is not retained after the report is generated.</p>
-        <p>PaperTrail Academic does not act as a "school official" under FERPA because it does not maintain or have access to education records — Inspect only reads the same revision data visible to the teacher in Google's native interface.</p>
-        <div class="reg-note">A DPA (Data Processing Agreement) is available on request for schools that require one. Contact hello@papertrailacademic.com.</div>
+        <p>FERPA protects personally identifiable information in education records. PaperTrail does not collect, store, or transmit student PII. Inspect reads only Google Docs revision metadata — timestamps and anonymized edit markers — which are not education records under FERPA. StyleMatch runs entirely locally with no transmission of any kind.</p>
+        <p>Verify transmits essay text to generate a report. The teacher controls what is submitted; no student name or ID is required or collected by PaperTrail. The submitted text is not retained after the report is generated. We recommend anonymizing student names from essay text before submitting.</p>
+        <div class="reg-note">A Data Processing Agreement (DPA) is available on request. Contact <a href="mailto:hello@papertrailacademic.com">hello@papertrailacademic.com</a>.</div>
       </div>
 
       <div class="reg-card">
         <div class="reg-flag">🇨🇦</div>
-        <h3>PIPEDA &amp; Provincial Law</h3>
-        <div class="reg-subtitle">Canada — federal &amp; provincial privacy frameworks</div>
-        <p>PaperTrail Academic is operated from Ontario, Canada by a sole proprietor. The operator is personally familiar with PIPEDA and Ontario's <em>Municipal Freedom of Information and Protection of Privacy Act</em> (MFIPPA) context.</p>
-        <p>StyleMatch and Inspect collect no personal information and raise no PIPEDA concerns. Verify transmits text to US-based infrastructure (Supabase/AWS and Anthropic). The text is processed and not retained.</p>
-        <p>Canadian schools using Verify should ensure their board's acceptable use policy permits transmitting student work to US-based AI services, consistent with their obligations under applicable provincial legislation.</p>
-        <div class="reg-note">Ontario teachers: the same data governance conversations you'd have before using any US-based AI writing tool apply here.</div>
+        <h3>Canadian Privacy Law</h3>
+        <div class="reg-subtitle">PIPEDA and provincial equivalents</div>
+        <p>Inspect and StyleMatch collect no personal information and raise no privacy concerns under PIPEDA or provincial legislation — there is nothing to transmit or store.</p>
+        <p>Verify transmits essay text to US-based infrastructure (Supabase/AWS and Anthropic). The text is processed to generate a report and is not retained. Canadian schools using Verify should confirm that their board's acceptable use policy permits transmitting student work to US-based AI services — the same question that applies to any AI writing tool.</p>
+        <div class="reg-note">A DPA is available on request. Contact <a href="mailto:hello@papertrailacademic.com">hello@papertrailacademic.com</a>.</div>
       </div>
 
       <div class="reg-card">
         <div class="reg-flag">🇪🇺</div>
         <h3>GDPR</h3>
         <div class="reg-subtitle">European Union — General Data Protection Regulation</div>
-        <p>StyleMatch and Inspect involve no personal data transmission and require no GDPR analysis beyond what applies to Google Docs itself.</p>
-        <p>Verify transmits text to US-based infrastructure. EU schools using Verify should ensure they have a lawful basis for processing under GDPR Article 6, and should note that the data transfer occurs to a US processor (Anthropic, Inc.).</p>
-        <p>Teachers using Verify with EU student text should anonymize identifying information before submission, as recommended in the Terms of Service. The text is not retained by PaperTrail after the report is generated.</p>
-        <div class="reg-note">A DPA for EU data processing is available on request. Contact hello@papertrailacademic.com.</div>
+        <p>Inspect and StyleMatch involve no personal data transmission and require no GDPR analysis beyond what applies to Google Docs itself.</p>
+        <p>Verify transmits text to US-based processors (Supabase/AWS and Anthropic, Inc.). EU schools using Verify should confirm they have a lawful basis for this processing under GDPR Article 6. Text submitted through Verify is not retained by PaperTrail after the report is generated. We recommend anonymizing student-identifying information before submission.</p>
+        <div class="reg-note">A DPA for EU data processing is available on request. Contact <a href="mailto:hello@papertrailacademic.com">hello@papertrailacademic.com</a>.</div>
       </div>
 
     </div>
