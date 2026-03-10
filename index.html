@@ -63,13 +63,14 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
 .hero-trust{display:flex;flex-wrap:wrap;gap:14px}
 .hero-trust span{font-size:12px;color:var(--ink-3);display:flex;align-items:center;gap:5px}
 .hero-trust span::before{content:'✓';color:var(--green);font-weight:700;font-size:11px}
-.hero-preview-card{background:#fff;border:1.5px solid var(--rule);border-radius:12px;padding:16px 20px;display:flex;align-items:flex-start;gap:14px;box-shadow:var(--shadow)}
+.hero-preview-card{background:#fff;border:1.5px solid var(--rule);border-left:4px solid var(--gold);border-radius:12px;padding:16px 20px;display:flex;align-items:flex-start;gap:14px;box-shadow:var(--shadow);cursor:pointer;transition:box-shadow .2s ease, transform .2s ease, border-color .2s ease;text-decoration:none;color:inherit}
+.hero-preview-card:hover{box-shadow:var(--shadow-lg);transform:translateX(3px);border-left-color:var(--gold-dk)}
 .hpc-icon{font-size:22px;flex-shrink:0;margin-top:2px}
 .hpc-title{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:6px}
 .hpc-desc{font-size:12px;color:var(--ink-3);margin-bottom:6px}
 .hpc-bullets{list-style:none;display:flex;flex-direction:column;gap:3px;margin-top:5px}
 .hpc-bullets li{font-size:11.5px;color:var(--ink-3);display:flex;align-items:flex-start;gap:5px;line-height:1.35}
-.hpc-bullets li::before{content:'·';color:var(--blue);font-weight:700;flex-shrink:0;font-size:14px;line-height:1.1}
+.hpc-bullets li::before{content:'·';color:var(--gold);font-weight:700;flex-shrink:0;font-size:14px;line-height:1.1}
 
 /* ─── Tagline ─────────────────────────────────────────────────── */
 .tagline-strip{background:var(--blue);padding:20px 28px;text-align:center}
@@ -397,7 +398,7 @@ footer{background:var(--ink);padding:42px 0 0}
     </div>
     <div style="display:flex;flex-direction:column;gap:11px">
 
-      <div class="hero-preview-card">
+      <div class="hero-preview-card" onclick="heroOpenCard('inspect')" role="button" tabindex="0" aria-label="Learn more about Inspect">
         <div class="hpc-icon">🔍</div>
         <div style="flex:1">
           <div class="hpc-title">Inspect &nbsp;<span style="color:var(--green);font-weight:700;font-size:11.5px">Free</span></div>
@@ -410,7 +411,7 @@ footer{background:var(--ink);padding:42px 0 0}
         </div>
       </div>
 
-      <div class="hero-preview-card">
+      <div class="hero-preview-card" onclick="heroOpenCard('stylematch')" role="button" tabindex="0" aria-label="Learn more about StyleMatch">
         <div class="hpc-icon">✍️</div>
         <div style="flex:1">
           <div class="hpc-title">StyleMatch &nbsp;<span style="color:var(--gold-dk);font-size:11.5px">$4.99/mo</span></div>
@@ -424,7 +425,7 @@ footer{background:var(--ink);padding:42px 0 0}
         </div>
       </div>
 
-      <div class="hero-preview-card">
+      <div class="hero-preview-card" onclick="heroOpenCard('verify')" role="button" tabindex="0" aria-label="Learn more about Verify">
         <div class="hpc-icon">📊</div>
         <div style="flex:1">
           <div class="hpc-title">Verify &nbsp;<span style="color:var(--teal);font-size:11.5px">From $0.60/report</span></div>
@@ -934,6 +935,14 @@ const overlay = document.getElementById('cardsOverlay');
 const row     = document.getElementById('cardsRow');
 let   openId  = null;
 
+// Called from hero preview cards — scroll to products then open
+function heroOpenCard(id) {
+  const productsSection = document.getElementById('products');
+  productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  // Wait for scroll to settle before opening card
+  setTimeout(() => openCard(id, null), 520);
+}
+
 function openCard(id, e) {
   if (e && e.target.closest('.card-close')) return;
   if (openId === id) return;
@@ -973,6 +982,13 @@ function _close(clearId = true) {
 
 overlay.addEventListener('click', () => _close(true));
 document.addEventListener('keydown', e => { if (e.key === 'Escape') _close(true); });
+
+// Keyboard support for hero preview cards
+document.querySelectorAll('.hero-preview-card').forEach(card => {
+  card.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); }
+  });
+});
 </script>
 
 </body>
