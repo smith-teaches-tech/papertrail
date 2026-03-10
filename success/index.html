@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Purchase Confirmed — PaperTrail Academic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue:   #4A6FA5;
+      --gold:   #C9A84C;
+      --teal:   #2a7a6b;
+      --ink:    #1a2235;
+      --muted:  #5a6478;
+      --border: #e2e6ed;
+      --bg:     #f7f8fb;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* ── Nav ── */
+    nav {
+      background: var(--ink);
+      padding: 0 32px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+
+    .nav-brand {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      font-size: 17px;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: 0.2px;
+    }
+
+    .nav-brand em {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .nav-link {
+      font-size: 13px;
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      transition: color .15s;
+    }
+
+    .nav-link:hover { color: #fff; }
+
+    /* ── Main ── */
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 24px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 24px rgba(26,34,53,0.07);
+      max-width: 560px;
+      width: 100%;
+      padding: 48px 48px 40px;
+      text-align: center;
+    }
+
+    .checkmark {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #eaf4f1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 28px;
+      animation: pop .35s cubic-bezier(.34,1.56,.64,1) both;
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.5); opacity: 0; }
+      to   { transform: scale(1);   opacity: 1; }
+    }
+
+    .card h1 {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      font-size: 26px;
+      color: var(--ink);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .card .sub {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .steps {
+      background: var(--bg);
+      border-radius: 10px;
+      padding: 20px 24px;
+      text-align: left;
+      margin-bottom: 32px;
+    }
+
+    .steps-title {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .7px;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .step:last-child { margin-bottom: 0; }
+
+    .step-num {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .step-text {
+      font-size: 14px;
+      color: var(--ink);
+      line-height: 1.5;
+    }
+
+    .step-text strong { font-weight: 600; }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--blue);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: filter .15s;
+      margin-bottom: 20px;
+    }
+
+    .btn-primary:hover { filter: brightness(1.1); }
+
+    .help-line {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .help-line a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .help-line a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      flex-shrink: 0;
+      padding: 16px 32px;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    footer a:hover { color: var(--ink); }
+
+    .footer-sep { margin: 0 8px; color: var(--border); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-brand">PaperTrail&trade; <em>Academic</em></a>
+    <a href="/" class="nav-link">← Back to site</a>
+  </nav>
+
+  <main>
+    <div class="card">
+
+      <div class="checkmark">✓</div>
+
+      <h1>You're all set.</h1>
+      <p class="sub">Your purchase is confirmed. It takes just a moment for your account to update — here's how to get started.</p>
+
+      <div class="steps">
+        <div class="steps-title">Next steps</div>
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-text"><strong>Open Google Docs</strong> and navigate to any student document.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-text"><strong>Click the PaperTrail&trade; bubble</strong> in the bottom-right corner to open the sidebar.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-text"><strong>Sign in</strong> using the button at the top of the sidebar — your new plan will be active immediately.</div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-text">If the extension isn't installed yet, add it to Chrome first.</div>
+        </div>
+      </div>
+
+      <a href="https://chromewebstore.google.com/detail/papertrail/kgkjmhfoijiiplbmablcjbooopndjbgm"
+         class="btn-primary" target="_blank" rel="noopener">
+        &#11015; Open Chrome Web Store
+      </a>
+
+      <div class="help-line">
+        Questions? Email <a href="mailto:support@papertrailacademic.com">support@papertrailacademic.com</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <a href="/privacy-policy/">Privacy Policy</a>
+    <span class="footer-sep">·</span>
+    <a href="/terms-of-service/">Terms of Service</a>
+    <span class="footer-sep">·</span>
+    <a href="mailto:support@papertrailacademic.com">Support</a>
+    <span class="footer-sep">·</span>
+    © 2026 PaperTrail Academic
+  </footer>
+
+</body>
+</html>
