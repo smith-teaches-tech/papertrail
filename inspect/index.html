@@ -74,9 +74,9 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
 .hero h1{font-family:'Lora',serif;font-size:clamp(28px,3.2vw,42px);font-weight:700;line-height:1.18;color:var(--ink);margin-bottom:16px}
 .hero-sub{font-size:15.5px;color:var(--ink-2);line-height:1.7;margin-bottom:28px;max-width:490px}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px}
-.hero-trust{display:flex;flex-wrap:wrap;gap:13px}
-.hero-trust span{font-size:12px;color:var(--ink-3);display:flex;align-items:center;gap:5px}
-.hero-trust span::before{content:'✓';color:var(--green);font-weight:700;font-size:11px}
+.hero-trust{display:flex;flex-direction:column;gap:10px;margin-top:24px}
+.hero-trust span{font-size:13.5px;color:var(--ink-2);display:flex;align-items:center;gap:8px}
+.hero-trust span::before{content:'✓';color:var(--green);font-weight:700;font-size:12px;flex-shrink:0}
 
 /* ══════════════════════════════════════
    SIDEBAR MOCKUP
@@ -312,19 +312,6 @@ footer{background:var(--ink);padding:42px 0 0}
   </div>
 </nav>
 
-<!-- VALUE PROP STRIP -->
-<div class="value-strip">
-  <div class="value-strip-inner">
-    <div class="vs-item"><strong>Revision history analysis</strong> <span class="vs-paid">paid elsewhere</span> — free here</div>
-    <div class="vs-divider"></div>
-    <div class="vs-item"><strong>Paste detection &amp; novelty scoring</strong> <span class="vs-paid">paid elsewhere</span> — free here</div>
-    <div class="vs-divider"></div>
-    <div class="vs-item"><strong>Revision playback</strong> <span class="vs-paid">paid elsewhere</span> — free here</div>
-    <div class="vs-divider"></div>
-    <div class="vs-item"><strong>No account required. Ever.</strong></div>
-  </div>
-</div>
-
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
@@ -339,9 +326,10 @@ footer{background:var(--ink);padding:42px 0 0}
       </div>
       <div class="hero-trust">
         <span>No account or login needed</span>
-        <span>No student data stored</span>
-        <span>Works in any Google Doc you can open</span>
+        <span>No student data stored — nothing leaves your browser</span>
+        <span>Works in any Google Doc you have access to</span>
         <span>StyleMatch &amp; Verify unlock in the same extension</span>
+        <span>Built by a teacher, for the hardest conversation in teaching</span>
       </div>
     </div>
 
@@ -601,11 +589,13 @@ footer{background:var(--ink);padding:42px 0 0}
 
   function tick() {
     if (opIdx >= script.length) {
-      // loop with a pause
+      // pause at end, then loop
       setTimeout(() => {
         currentText = ''; step = 0; opIdx = 0; charIdx = 0;
+        deleteCount = 0; pauseFrames = 0;
         setMode('typing', C.typing, 'TYPING');
         render(C.typing);
+        setTimeout(tick, 400);
       }, 3200);
       return;
     }
