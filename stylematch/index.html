@@ -61,12 +61,12 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
 .dd-divider{height:1px;background:var(--rule);margin:4px 0}
 
 /* Hero */
-.hero{background:linear-gradient(155deg,#fdf8ee 0%,#fff 55%,#f9fafc 100%);padding:68px 0 56px;border-bottom:1px solid var(--rule)}
+.hero{background:linear-gradient(155deg,#fdf8ee 0%,#fff 55%,#f9fafc 100%);padding:48px 0 0;border-bottom:none}
 .hero-inner{max-width:1100px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:1fr 460px;gap:52px;align-items:start}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gold-lt);color:var(--gold-dk);border:1px solid #e8d49a;border-radius:20px;padding:4px 14px;font-size:11.5px;font-weight:700;margin-bottom:18px}
-.hero h1{font-family:'Lora',serif;font-size:clamp(28px,3.2vw,42px);font-weight:700;line-height:1.18;color:var(--ink);margin-bottom:16px}
-.hero-sub{font-size:15.5px;color:var(--ink-2);line-height:1.7;margin-bottom:28px;max-width:490px}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gold-lt);color:var(--gold-dk);border:1px solid #e8d49a;border-radius:20px;padding:4px 14px;font-size:11.5px;font-weight:700;margin-bottom:14px}
+.hero h1{font-family:'Lora',serif;font-size:clamp(28px,3.2vw,42px);font-weight:700;line-height:1.18;color:var(--ink);margin-bottom:12px}
+.hero-sub{font-size:15px;color:var(--ink-2);line-height:1.68;margin-bottom:22px;max-width:490px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px}
 .hero-trust{display:flex;flex-direction:column;gap:10px;margin-top:24px}
 .hero-trust span{font-size:13.5px;color:var(--ink-2);display:flex;align-items:center;gap:8px}
 .hero-trust span::before{content:'✓';color:var(--gold);font-weight:700;font-size:12px;flex-shrink:0}
@@ -159,8 +159,8 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
 .rc-title{font-size:13.5px;font-weight:600;color:var(--ink);margin-bottom:4px;line-height:1.3}
 .rc-cite{font-size:11px;color:var(--ink-3);font-style:italic;line-height:1.5}
 
-/* How it works */
-.hiw-section{padding:72px 0;background:var(--white);border-bottom:1px solid var(--rule)}
+/* How it works — merged into hero zone */
+.hiw-section{padding:40px 0 60px;background:linear-gradient(180deg,#fdf8ee 0%,#f9fafc 100%);border-bottom:1px solid var(--rule)}
 .hiw-inner{max-width:1100px;margin:0 auto;padding:0 28px}
 .hiw-hdr{max-width:620px;margin:0 auto 48px;text-align:center}
 .hiw-hdr h2{font-family:'Lora',serif;font-size:clamp(22px,2.8vw,30px);color:var(--ink);margin-bottom:10px}
@@ -480,58 +480,58 @@ footer{background:var(--ink);padding:42px 0 0}
         </div>
         <div class="rm-metrics">
 
-          <!-- FK Grade: Similar -->
+          <!-- Function Words: Divergent — leads with the strongest signal -->
+          <div class="rm-metric">
+            <div class="rm-metric-top">
+              <div class="rm-metric-name">Grammatical Function Words</div>
+              <div class="rm-metric-vals">
+                <span class="rm-val blue" style="font-size:8.5px">Top: of, in, that, for</span>
+                <span style="font-size:9px;color:var(--ink-3)">vs</span>
+                <span class="rm-val blue" style="font-size:8.5px">Top: the, and, is, as</span>
+              </div>
+            </div>
+            <div class="rm-bar-wrap" style="padding:0 0 4px 0">
+              <div class="rm-bar-track"><div class="rm-bar-fill bar-red" style="width:18%"></div></div>
+              <span class="rm-pct pct-red">18%</span>
+              <span class="rm-verdict verd-div">Divergent</span>
+            </div>
+            <div class="rm-metric-note">Δ 2.41 · Burrows' Delta over 30 core function words. Used unconsciously — among the most reliable authorship signals in free prose.</div>
+          </div>
+
+          <!-- FK Grade: Divergent -->
           <div class="rm-metric">
             <div class="rm-metric-top">
               <div class="rm-metric-name">FK Grade Level</div>
               <div class="rm-metric-vals">
-                <span class="rm-val blue">Grade 13.2</span>
+                <span class="rm-val blue">Grade 10.4</span>
                 <span style="font-size:9px;color:var(--ink-3)">vs</span>
-                <span class="rm-val blue">Grade 14.1</span>
+                <span class="rm-val blue">Grade 14.9</span>
               </div>
               <div class="rm-bar-wrap">
-                <div class="rm-bar-track"><div class="rm-bar-fill bar-green" style="width:91%"></div></div>
-                <span class="rm-pct pct-green">91%</span>
-                <span class="rm-verdict verd-sim">Similar</span>
+                <div class="rm-bar-track"><div class="rm-bar-fill bar-red" style="width:34%"></div></div>
+                <span class="rm-pct pct-red">34%</span>
+                <span class="rm-verdict verd-div">Divergent</span>
               </div>
             </div>
-            <div class="rm-metric-note">Grade gap: 0.9 levels — within the expected range for the same writer across tasks.</div>
+            <div class="rm-metric-note">Grade gap: 4.5 levels — above the 3-level threshold. Submitted work reads at a substantially higher complexity level than the controlled sample.</div>
           </div>
 
-          <!-- Avg Sentence Length: Similar -->
+          <!-- Discourse Markers: Divergent -->
           <div class="rm-metric">
             <div class="rm-metric-top">
-              <div class="rm-metric-name">Avg Sentence Length</div>
+              <div class="rm-metric-name">Discourse Marker Profile</div>
               <div class="rm-metric-vals">
-                <span class="rm-val blue">21.4 w/s</span>
+                <span class="rm-val blue" style="font-size:8.5px">because, since, thus</span>
                 <span style="font-size:9px;color:var(--ink-3)">vs</span>
-                <span class="rm-val blue">22.9 w/s</span>
-              </div>
-              <div class="rm-bar-wrap">
-                <div class="rm-bar-track"><div class="rm-bar-fill bar-green" style="width:84%"></div></div>
-                <span class="rm-pct pct-green">84%</span>
-                <span class="rm-verdict verd-sim">Similar</span>
+                <span class="rm-val blue" style="font-size:8.5px">however, furthermore, additionally</span>
               </div>
             </div>
-            <div class="rm-metric-note">Avg gap: 1.5 words/sentence — consistent with same-author variation.</div>
-          </div>
-
-          <!-- Sentence Rhythm: Notable -->
-          <div class="rm-metric">
-            <div class="rm-metric-top">
-              <div class="rm-metric-name">Sentence Rhythm (SD)</div>
-              <div class="rm-metric-vals">
-                <span class="rm-val blue">SD 8.1</span>
-                <span style="font-size:9px;color:var(--ink-3)">vs</span>
-                <span class="rm-val blue">SD 13.7</span>
-              </div>
-              <div class="rm-bar-wrap">
-                <div class="rm-bar-track"><div class="rm-bar-fill bar-amber" style="width:61%"></div></div>
-                <span class="rm-pct pct-amber">61%</span>
-                <span class="rm-verdict verd-not">Notable</span>
-              </div>
+            <div class="rm-bar-wrap" style="padding:0 0 4px 0">
+              <div class="rm-bar-track"><div class="rm-bar-fill bar-red" style="width:31%"></div></div>
+              <span class="rm-pct pct-red">31%</span>
+              <span class="rm-verdict verd-div">Divergent</span>
             </div>
-            <div class="rm-metric-note">SD gap: 5.6 words — submitted work shows considerably more varied sentence rhythm than the controlled sample.</div>
+            <div class="rm-metric-note">Δ 1.87 · Submitted work relies on however/furthermore/additionally; controlled sample uses causal connectives. Same-genre — this divergence is notable.</div>
           </div>
 
           <!-- Punctuation: Notable -->
@@ -552,6 +552,42 @@ footer{background:var(--ink);padding:42px 0 0}
             <div class="rm-metric-note">Comma rate nearly double in submitted work; dashes absent in controlled sample but present in submission. Punctuation habits are largely unconscious.</div>
           </div>
 
+          <!-- Sentence Rhythm: Notable -->
+          <div class="rm-metric">
+            <div class="rm-metric-top">
+              <div class="rm-metric-name">Sentence Rhythm (SD)</div>
+              <div class="rm-metric-vals">
+                <span class="rm-val blue">SD 8.1</span>
+                <span style="font-size:9px;color:var(--ink-3)">vs</span>
+                <span class="rm-val blue">SD 13.7</span>
+              </div>
+              <div class="rm-bar-wrap">
+                <div class="rm-bar-track"><div class="rm-bar-fill bar-amber" style="width:61%"></div></div>
+                <span class="rm-pct pct-amber">61%</span>
+                <span class="rm-verdict verd-not">Notable</span>
+              </div>
+            </div>
+            <div class="rm-metric-note">SD gap: 5.6 words — submitted work shows considerably more varied sentence rhythm than the controlled sample.</div>
+          </div>
+
+          <!-- Avg Sentence Length: Similar -->
+          <div class="rm-metric">
+            <div class="rm-metric-top">
+              <div class="rm-metric-name">Avg Sentence Length</div>
+              <div class="rm-metric-vals">
+                <span class="rm-val blue">21.4 w/s</span>
+                <span style="font-size:9px;color:var(--ink-3)">vs</span>
+                <span class="rm-val blue">22.9 w/s</span>
+              </div>
+              <div class="rm-bar-wrap">
+                <div class="rm-bar-track"><div class="rm-bar-fill bar-green" style="width:84%"></div></div>
+                <span class="rm-pct pct-green">84%</span>
+                <span class="rm-verdict verd-sim">Similar</span>
+              </div>
+            </div>
+            <div class="rm-metric-note">Avg gap: 1.5 words/sentence — consistent with same-author variation.</div>
+          </div>
+
           <!-- TTR: Similar -->
           <div class="rm-metric">
             <div class="rm-metric-top">
@@ -568,42 +604,6 @@ footer{background:var(--ink);padding:42px 0 0}
               </div>
             </div>
             <div class="rm-metric-note">Vocab range gap: 2.4% — comparable vocabulary density across both samples.</div>
-          </div>
-
-          <!-- Function Words: Divergent -->
-          <div class="rm-metric">
-            <div class="rm-metric-top">
-              <div class="rm-metric-name">Grammatical Function Words</div>
-              <div class="rm-metric-vals">
-                <span class="rm-val blue" style="font-size:8.5px">Top: of, in, that, for</span>
-                <span style="font-size:9px;color:var(--ink-3)">vs</span>
-                <span class="rm-val blue" style="font-size:8.5px">Top: the, and, is, as</span>
-              </div>
-            </div>
-            <div class="rm-bar-wrap" style="padding:0 0 4px 0">
-              <div class="rm-bar-track"><div class="rm-bar-fill bar-red" style="width:18%"></div></div>
-              <span class="rm-pct pct-red">18%</span>
-              <span class="rm-verdict verd-div">Divergent</span>
-            </div>
-            <div class="rm-metric-note">Δ 2.41 · Burrows' Delta over 30 core function words. This is the strongest authorship signal in free prose — used unconsciously, difficult to imitate.</div>
-          </div>
-
-          <!-- Discourse Markers: Divergent -->
-          <div class="rm-metric">
-            <div class="rm-metric-top">
-              <div class="rm-metric-name">Discourse Marker Profile</div>
-              <div class="rm-metric-vals">
-                <span class="rm-val blue" style="font-size:8.5px">because, since, thus</span>
-                <span style="font-size:9px;color:var(--ink-3)">vs</span>
-                <span class="rm-val blue" style="font-size:8.5px">however, furthermore, additionally</span>
-              </div>
-            </div>
-            <div class="rm-bar-wrap" style="padding:0 0 4px 0">
-              <div class="rm-bar-track"><div class="rm-bar-fill bar-red" style="width:31%"></div></div>
-              <span class="rm-pct pct-red">31%</span>
-              <span class="rm-verdict verd-div">Divergent</span>
-            </div>
-            <div class="rm-metric-note">Δ 1.87 · Submitted work relies on however/furthermore/additionally; controlled sample uses causal connectives. Same-genre comparison — this divergence is notable.</div>
           </div>
 
         </div>
@@ -626,35 +626,35 @@ footer{background:var(--ink);padding:42px 0 0}
         <div class="feat-item">
           <div class="feat-icon">🔤</div>
           <div>
-            <h3>Grammatical Function Words (35% weight)</h3>
+            <h3>Grammatical Function Words</h3>
             <p>Burrows' Delta over 30 core function words — <em>the, and, of, in, that</em> and so on. These words are used unconsciously and are among the most reliable stylometric signals known. Writers cannot easily change their function word profile even when they try.</p>
           </div>
         </div>
         <div class="feat-item">
           <div class="feat-icon">🗣️</div>
           <div>
-            <h3>Discourse Marker Profile (part of weighted score)</h3>
+            <h3>Discourse Marker Profile</h3>
             <p>Delta over 29 connectives and stance markers — <em>however, therefore, furthermore, suggests</em>. Reflects how a writer structures argument and signals reasoning. Strong signal for same-genre comparisons; the report flags when genres differ.</p>
           </div>
         </div>
         <div class="feat-item">
           <div class="feat-icon">，</div>
           <div>
-            <h3>Punctuation Fingerprint (20% weight)</h3>
+            <h3>Punctuation Fingerprint</h3>
             <p>Comma, semicolon, em-dash, colon, exclamation, and question mark rates per 1,000 characters. Punctuation habits are largely unconscious — most people don't know how often they use a semicolon, which makes it a surprisingly strong authorship signal.</p>
           </div>
         </div>
         <div class="feat-item">
           <div class="feat-icon">📐</div>
           <div>
-            <h3>Sentence Length + Rhythm (15% weight)</h3>
-            <p>Average sentence length and its standard deviation, separately. Average length catches obvious differences in sentence construction; SD catches rhythm — a writer who mixes short and long sentences has a signature that's distinct from someone who writes uniformly.</p>
+            <h3>Sentence Length + Rhythm</h3>
+            <p>Average sentence length and its standard deviation, separately. Average length catches obvious differences in sentence construction; SD catches rhythm — a writer who mixes short and long sentences has a signature distinct from someone who writes uniformly.</p>
           </div>
         </div>
         <div class="feat-item">
           <div class="feat-icon">📊</div>
           <div>
-            <h3>Flesch-Kincaid Grade Level (10% weight)</h3>
+            <h3>Flesch-Kincaid Grade Level</h3>
             <p>Computed from sentence length and syllable count. Reading complexity is relatively stable across writing tasks for the same writer. A gap of more than 3 grade levels between samples is flagged as worth examining.</p>
           </div>
         </div>
