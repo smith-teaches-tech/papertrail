@@ -1,169 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — PaperTrail</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — PaperTrail Academic</title>
+  <meta name="description" content="Privacy policy for PaperTrail Academic — how the extension handles data, what is and isn't transmitted, and your rights as an educator." />
+  <link rel="icon" href="/icon128.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      background: #f0f4f9;
-      color: #202124;
-      padding: 0;
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --blue:#4A6FA5; --blue-dk:#3a5882; --blue-lt:#e8eef6;
+      --gold:#C9A84C; --gold-dk:#a8892f; --gold-lt:#fdf6e3;
+      --teal:#2a7a6b; --teal-lt:#e6f4f1;
+      --ink:#1a2235;  --ink-2:#3d4f6e;   --ink-3:#6b7a96;
+      --rule:#dce4ef; --bg:#f9fafc; --white:#fff;
+      --green:#34a853;
+      --shadow:0 4px 24px rgba(74,111,165,.10);
+      --shadow-lg:0 16px 56px rgba(74,111,165,.18);
     }
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+    a{color:var(--blue);text-decoration:none}
+    a:hover{text-decoration:underline}
+    img{display:block;max-width:100%}
 
-    header {
-      background: #4A6FA5;
-      padding: 20px 40px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
+    /* ─── Nav ─────────────────────────────────────────────────────── */
+    nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+    .nav-inner{max-width:1140px;margin:0 auto;padding:0 28px;height:60px;display:flex;align-items:center;gap:28px}
+    .nav-logo{display:flex;align-items:center;gap:9px;margin-right:auto;text-decoration:none}
+    .nav-logo img{width:26px;height:26px}
+    .nav-wm{font-family:'Lora',serif;font-size:16px;font-weight:700;color:var(--ink)}
+    .nav-wm em{color:var(--blue);font-style:italic}
+    .nl{font-size:13px;font-weight:500;color:var(--ink-2);transition:color .15s;text-decoration:none}
+    .nl:hover{color:var(--blue);text-decoration:none}
+    .nl.active{color:var(--blue);font-weight:600}
+    .nl.cta{background:var(--gold);color:#fff;padding:7px 16px;border-radius:5px;font-weight:600}
+    .nl.cta:hover{background:var(--gold-dk);text-decoration:none}
+    .nav-dropdown{position:relative}
+    .nav-dropdown>.nl{display:flex;align-items:center;gap:4px;cursor:pointer;user-select:none}
+    .nav-dropdown>.nl .dd-caret{font-size:10px;opacity:.55;display:inline-block;transition:transform .2s}
+    .nav-dropdown.open>.nl .dd-caret{transform:rotate(-180deg)}
+    .nav-dd-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:8px;opacity:0;pointer-events:none;transition:opacity .18s ease}
+    .nav-dropdown.open .nav-dd-menu{opacity:1;pointer-events:all}
+    .nav-dd-inner{background:#fff;border:1.5px solid var(--rule);border-radius:10px;box-shadow:var(--shadow-lg);padding:8px;min-width:230px}
+    .dd-item{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:7px;text-decoration:none;transition:background .15s;color:var(--ink)}
+    .dd-item:hover{background:var(--bg);text-decoration:none}
+    .dd-icon{font-size:16px;flex-shrink:0}
+    .dd-label{font-size:13px;font-weight:600;color:var(--ink);display:block;line-height:1.2}
+    .dd-sub{font-size:11px;color:var(--ink-3);font-weight:400}
+    .dd-divider{height:1px;background:var(--rule);margin:4px 0}
+
+    /* ─── Page header ─────────────────────────────────────────────── */
+    .page-header{background:linear-gradient(135deg,var(--blue-lt) 0%,#fff 100%);border-bottom:1px solid var(--rule);padding:48px 28px 40px}
+    .page-header-inner{max-width:760px;margin:0 auto}
+    .breadcrumb{font-size:12px;color:var(--ink-3);margin-bottom:14px}
+    .breadcrumb a{color:var(--ink-3);text-decoration:none}
+    .breadcrumb a:hover{color:var(--blue)}
+    .breadcrumb span{margin:0 6px;opacity:.5}
+    .page-header h1{font-family:'Lora',serif;font-size:clamp(26px,3vw,36px);font-weight:700;color:var(--ink);margin-bottom:10px}
+    .page-header .meta{font-size:13px;color:var(--ink-3)}
+
+    /* ─── Document ────────────────────────────────────────────────── */
+    .doc-wrap{max-width:760px;margin:0 auto;padding:48px 28px 80px}
+
+    .lead-note{background:var(--blue-lt);border-left:4px solid var(--blue);border-radius:0 8px 8px 0;padding:16px 20px;margin-bottom:40px;font-size:14px;line-height:1.7;color:var(--ink-2)}
+    .lead-note strong{color:var(--ink)}
+
+    .doc-section{margin-bottom:40px;scroll-margin-top:80px}
+    .doc-section h2{font-family:'Lora',serif;font-size:19px;font-weight:700;color:var(--ink);margin-bottom:12px;padding-bottom:10px;border-bottom:2px solid var(--rule)}
+    .doc-section p{font-size:14.5px;line-height:1.8;color:var(--ink-2);margin-bottom:12px}
+    .doc-section p:last-child{margin-bottom:0}
+    .doc-section strong{color:var(--ink);font-weight:600}
+    .doc-section ul{margin:10px 0 14px 0;padding-left:20px;display:flex;flex-direction:column;gap:7px}
+    .doc-section ul li{font-size:14px;line-height:1.7;color:var(--ink-2)}
+
+    .callout{background:#fff;border:1.5px solid var(--rule);border-radius:8px;padding:16px 20px;margin:16px 0}
+    .callout.blue{border-color:var(--blue);background:var(--blue-lt)}
+    .callout.blue p{color:var(--ink-2)}
+
+    .doc-footer-note{text-align:center;font-size:12.5px;color:var(--ink-3);font-style:italic;padding:24px 0 0;border-top:1px solid var(--rule);line-height:1.7}
+
+    /* ─── Footer ──────────────────────────────────────────────────── */
+    footer{background:var(--ink);padding:42px 0 0}
+    .ftr-inner{max-width:1140px;margin:0 auto;padding:0 28px 34px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+    .ftr-logo{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+    .ftr-logo img{width:23px;height:23px}
+    .ftr-wm{font-family:'Lora',serif;font-size:14.5px;font-weight:700;color:#fff}
+    .ftr-wm em{color:var(--gold);font-style:italic}
+    .ftr-tag{font-size:12.5px;color:rgba(255,255,255,.42);line-height:1.6;font-style:italic}
+    .ftr-col h4{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.35);margin-bottom:12px}
+    .ftr-col ul{list-style:none;display:flex;flex-direction:column;gap:8px;padding:0}
+    .ftr-col ul a{font-size:12.5px;color:rgba(255,255,255,.62);transition:color .15s;text-decoration:none}
+    .ftr-col ul a:hover{color:#fff}
+    .ftr-bottom{border-top:1px solid rgba(255,255,255,.1);padding:15px 28px;max-width:1140px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+    .ftr-bottom span{font-size:11.5px;color:rgba(255,255,255,.36)}
+    .ftr-bottom a{color:rgba(255,255,255,.5);text-decoration:none}
+    .ftr-bottom a:hover{color:#fff}
+
+    @media(max-width:480px){
+      .nav-inner .nl:not(.cta){display:none}
+      .ftr-inner{grid-template-columns:1fr}
+      .doc-wrap{padding:32px 20px 60px}
+      .page-header{padding:32px 20px 28px}
     }
-
-    header img {
-      width: 36px;
-      height: 36px;
-    }
-
-    header a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-    }
-
-    header a:hover {
-      opacity: 0.85;
-    }
-
-    .container {
-      max-width: 720px;
-      margin: 48px auto;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-      padding: 48px 56px;
-    }
-
-    h1 {
-      font-size: 28px;
-      font-weight: 800;
-      color: #4A6FA5;
-      margin-bottom: 8px;
-    }
-
-    .updated {
-      font-size: 13px;
-      color: #80868b;
-      margin-bottom: 40px;
-    }
-
-    h2 {
-      font-size: 16px;
-      font-weight: 700;
-      color: #4A6FA5;
-      margin-top: 36px;
-      margin-bottom: 12px;
-      padding-bottom: 6px;
-      border-bottom: 2px solid #eef2f8;
-    }
-
-    p {
-      font-size: 15px;
-      line-height: 1.75;
-      color: #3c4043;
-      margin-bottom: 14px;
-    }
-
-    .highlight {
-      background: #eef2f8;
-      border-left: 4px solid #4A6FA5;
-      padding: 14px 18px;
-      border-radius: 0 6px 6px 0;
-      margin: 24px 0;
-      font-size: 15px;
-      line-height: 1.7;
-      color: #3c4043;
-    }
-
-    a {
-      color: #4A6FA5;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      text-align: center;
-      padding: 32px;
-      font-size: 13px;
-      color: #80868b;
-    }
-
-    footer a {
-      color: #4A6FA5;
-    }
-
-    @media (max-width: 600px) {
-      .container { margin: 20px; padding: 28px 24px; }
-      header { padding: 16px 20px; }
+    @media(max-width:700px){
+      .ftr-inner{grid-template-columns:1fr 1fr}
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="../icon128.png" alt="PaperTrail logo" />
-    <a href="/papertrail">PaperTrail</a>
-  </header>
-
-  <div class="container">
-
-    <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: March 2026</p>
-
-    <div class="highlight">
-      PaperTrail does not collect, store, or transmit any personal data to any external server. Everything the extension does happens locally in your browser.
+<!-- ═══ NAV ═══════════════════════════════════════════════════════ -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <img src="/icon128.png" alt="PaperTrail Academic" />
+      <span class="nav-wm">PaperTrail <em>Academic</em></span>
+    </a>
+    <div class="nav-dropdown" id="navDropdown">
+      <span class="nl" id="navDropdownTrigger">Products <span class="dd-caret">▾</span></span>
+      <div class="nav-dd-menu">
+        <div class="nav-dd-inner">
+          <a href="/inspect" class="dd-item">
+            <span class="dd-icon">✏️</span>
+            <span><span class="dd-label">Inspect <span style="color:var(--green);font-size:10px;font-weight:700">Free</span></span><span class="dd-sub">Revision history, paste detection, playback</span></span>
+          </a>
+          <div class="dd-divider"></div>
+          <a href="/stylematch" class="dd-item">
+            <span class="dd-icon">🔍</span>
+            <span><span class="dd-label">StyleMatch <span style="color:var(--gold-dk);font-size:10px">$4.99/mo</span></span><span class="dd-sub">8-metric authorship consistency analysis</span></span>
+          </a>
+          <div class="dd-divider"></div>
+          <a href="/verify" class="dd-item">
+            <span class="dd-icon">🔬</span>
+            <span><span class="dd-label">Verify <span style="color:var(--teal);font-size:10px">From $0.60</span></span><span class="dd-sub">AI-assisted deep analysis &amp; reports</span></span>
+          </a>
+        </div>
+      </div>
     </div>
+    <a href="/#pricing" class="nl">Pricing</a>
+    <a href="/for-schools" class="nl">For Schools</a>
+    <a href="/privacy-policy" class="nl active">Privacy</a>
+    <a href="https://chromewebstore.google.com/detail/papertrail/kgkjmhfoijiiplbmablcjbooopndjbgm"
+       class="nl cta" target="_blank" rel="noopener">Add to Chrome — Free</a>
+  </div>
+</nav>
 
+<!-- ═══ PAGE HEADER ════════════════════════════════════════════════ -->
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="breadcrumb">
+      <a href="/">PaperTrail Academic</a>
+      <span>›</span>
+      Privacy Policy
+    </div>
+    <h1>Privacy Policy</h1>
+    <div class="meta">Last updated: March 2026</div>
+  </div>
+</div>
+
+<!-- ═══ DOCUMENT ═══════════════════════════════════════════════════ -->
+<div class="doc-wrap">
+
+  <div class="lead-note">
+    <strong>The short version:</strong> PaperTrail does not collect, store, or transmit any personal data for Inspect or StyleMatch — everything runs locally in your browser. Verify transmits essay text to generate a report, but does not retain it. No student accounts. No advertising. No analytics.
+  </div>
+
+  <div class="doc-section">
     <h2>What PaperTrail Accesses</h2>
     <p>PaperTrail reads revision history data from Google Docs using Google's built-in revision API — the same data that powers the native revision history feature inside Google Docs. This data includes document content at various points in time, edit timestamps, and anonymised author identifiers.</p>
     <p>This data is accessed solely to display writing analysis results to the person using the extension. It is never transmitted to any server, stored beyond the current browser session, or shared with any third party.</p>
+  </div>
 
+  <div class="doc-section">
+    <h2>StyleMatch — Text Never Leaves Your Browser</h2>
+    <div class="callout blue">
+      <p><strong>All StyleMatch analysis is performed locally on your device.</strong> The text you paste into the StyleMatch panel is never transmitted to PaperTrail Academic or any third party. There is no server-side component to StyleMatch — this is a design choice, not just a policy.</p>
+    </div>
+    <p>When you run a StyleMatch comparison, all eight stylometric calculations happen in your browser using JavaScript. Once you close the sidebar or navigate away, the text is cleared from memory.</p>
+  </div>
+
+  <div class="doc-section">
+    <h2>Verify — Transmitted, Not Retained</h2>
+    <p>Verify is the only PaperTrail tool that transmits text. When you run a Verify report, the submitted text is:</p>
+    <ul>
+      <li>Sent to PaperTrail Academic's secure backend (Supabase, hosted on AWS infrastructure)</li>
+      <li>Forwarded to the Anthropic API for AI-assisted analysis</li>
+      <li>Returned as a structured report saved to your account</li>
+    </ul>
+    <p><strong>The full essay text is not stored after the report is generated.</strong> Only report metadata is retained — scores, timestamps, and any label you assigned. Anthropic processes submitted text under terms that prohibit using it for model training. See <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">anthropic.com/privacy</a> for their full policy.</p>
+    <p>If your institution requires it, you should anonymize student-identifying information from text before submitting through Verify.</p>
+  </div>
+
+  <div class="doc-section">
     <h2>What PaperTrail Does Not Do</h2>
-    <p>PaperTrail does not collect any personal information. It does not track usage, send analytics, display advertising, or communicate with any external server of any kind. When you close the sidebar or navigate away from a document, all revision data is cleared from memory.</p>
-    <p>PaperTrail does not modify any Google Doc or leave any record of having been used on a document.</p>
+    <p>PaperTrail does not collect any personal information. It does not track usage, send analytics, display advertising, or sell data of any kind.</p>
+    <p>PaperTrail does not modify any Google Doc or leave any record of having been used on a document. It does not access student information systems, gradebooks, or any Google Workspace admin data.</p>
+    <p>Students never interact with PaperTrail. No student accounts are created. No student data is collected by PaperTrail Academic directly.</p>
+  </div>
 
-    <h2>Permissions</h2>
+  <div class="doc-section">
+    <h2>Chrome Extension Permissions</h2>
     <p>PaperTrail requests the following Chrome permissions in order to function:</p>
     <p><strong>activeTab and scripting</strong> — required to inject the revision analysis tool into the active Google Docs page.</p>
     <p><strong>tabs</strong> — required to open the playback window in a new tab and to detect when the user is on a Google Docs or Google Classroom page.</p>
-    <p><strong>unlimitedStorage</strong> — required to temporarily hold revision data for large documents, which can contain tens of thousands of entries and exceed Chrome's default storage limit. This data is cleared when the session ends.</p>
+    <p><strong>unlimitedStorage</strong> — required to temporarily hold revision data for large documents, which can contain tens of thousands of entries. This data is cleared when the session ends.</p>
     <p><strong>Host permissions for docs.google.com and classroom.google.com</strong> — required to operate on Google Docs and Google Classroom pages.</p>
-
-    <h2>Google Classroom and Student Data</h2>
-    <p>PaperTrail respects the access permissions that Google enforces on all documents. It can only read revision history that the logged-in user already has permission to view. It does not access any student data beyond what is visible in the document's standard revision history.</p>
-    <p>Because no data leaves the browser, PaperTrail does not raise additional data governance concerns beyond those of Google Docs itself.</p>
-
-    <h2>Children's Privacy</h2>
-    <p>PaperTrail does not knowingly collect any information from anyone, including minors. The extension processes document revision data locally and discards it at the end of each session.</p>
-
-    <h2>Changes to This Policy</h2>
-    <p>If PaperTrail's data practices change in a future version — for example, if optional account features are introduced — this policy will be updated and the date above will reflect the change.</p>
-
-    <h2>Contact</h2>
-    <p>If you have any questions about this privacy policy or how PaperTrail handles data, you can reach us through the Chrome Web Store listing page.</p>
-
   </div>
 
-  <footer>
-    <a href="/papertrail">← Back to PaperTrail</a>
-  </footer>
+  <div class="doc-section">
+    <h2>Google Classroom and Student Data</h2>
+    <p>PaperTrail respects the access permissions that Google enforces on all documents. It can only read revision history that the logged-in teacher already has permission to view. It does not access any student data beyond what is visible in the document's standard revision history.</p>
+    <p>Because Inspect and StyleMatch process data locally without transmission, they do not raise additional data governance concerns beyond those of Google Docs itself. For Verify, see the section above.</p>
+    <p>Schools and IT coordinators with compliance questions should review our <a href="/for-schools">For Schools</a> page, which covers FERPA, PIPEDA, and GDPR considerations in plain language.</p>
+  </div>
+
+  <div class="doc-section">
+    <h2>Children's Privacy</h2>
+    <p>PaperTrail does not knowingly collect any information from anyone, including minors. The extension is designed exclusively for use by educators. Document revision data accessed by Inspect is processed locally and discarded at the end of each session.</p>
+  </div>
+
+  <div class="doc-section">
+    <h2>Changes to This Policy</h2>
+    <p>If PaperTrail's data practices change — for example, if new features involve data transmission — this policy will be updated and the date above will reflect the change. Material changes will also be communicated to registered users by email.</p>
+  </div>
+
+  <div class="doc-section">
+    <h2>Contact</h2>
+    <p>Questions about this privacy policy or how PaperTrail handles data can be directed to <a href="mailto:hello@papertrailacademic.com">hello@papertrailacademic.com</a>.</p>
+    <p>For school and institutional inquiries — including DPA requests and compliance questions — see <a href="/for-schools">For Schools</a> or email <a href="mailto:hello@papertrailacademic.com?subject=Privacy Question">hello@papertrailacademic.com</a> with "Privacy Question" in the subject line.</p>
+  </div>
+
+  <div class="doc-footer-note">
+    This privacy policy covers PaperTrail Academic's website and Chrome extension.<br>
+    PaperTrail Academic is operated by Michael Smith. &copy; 2026 All rights reserved.<br>
+    Also see: <a href="/terms-of-service">Terms of Service</a>
+  </div>
+
+</div>
+
+<!-- ═══ FOOTER ═══════════════════════════════════════════════════════ -->
+<footer>
+  <div class="ftr-inner">
+    <div>
+      <div class="ftr-logo">
+        <img src="/icon128.png" alt="PaperTrail Academic" />
+        <span class="ftr-wm">PaperTrail <em>Academic</em></span>
+      </div>
+      <p class="ftr-tag">You've read thousands of student essays.<br>Trust that instinct — then document it.</p>
+    </div>
+    <div class="ftr-col">
+      <h4>Products</h4>
+      <ul>
+        <li><a href="/inspect">Inspect</a></li>
+        <li><a href="/stylematch">StyleMatch</a></li>
+        <li><a href="/verify">Verify</a></li>
+        <li><a href="https://chromewebstore.google.com/detail/papertrail/kgkjmhfoijiiplbmablcjbooopndjbgm" target="_blank" rel="noopener">Chrome Web Store</a></li>
+      </ul>
+    </div>
+    <div class="ftr-col">
+      <h4>For Schools</h4>
+      <ul>
+        <li><a href="/for-schools">Privacy &amp; Compliance</a></li>
+        <li><a href="mailto:hello@papertrailacademic.com?subject=School or Department Inquiry">School Inquiries</a></li>
+        <li><a href="mailto:hello@papertrailacademic.com?subject=Privacy Question">FERPA / PIPEDA / GDPR</a></li>
+      </ul>
+    </div>
+    <div class="ftr-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/terms-of-service">Terms of Service</a></li>
+        <li><a href="mailto:hello@papertrailacademic.com">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ftr-bottom">
+    <span>&copy; 2026 PaperTrail Academic. All rights reserved. Operated by Michael Smith.</span>
+    <span>
+      <a href="/privacy-policy">Privacy Policy</a> &nbsp;&middot;&nbsp;
+      <a href="/terms-of-service">Terms of Service</a> &nbsp;&middot;&nbsp;
+      <a href="mailto:hello@papertrailacademic.com">Contact</a>
+    </span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const dd = document.getElementById('navDropdown');
+  const trigger = document.getElementById('navDropdownTrigger');
+  if (!dd) return;
+  let closeTimer;
+  function open()  { clearTimeout(closeTimer); dd.classList.add('open'); }
+  function close() { closeTimer = setTimeout(() => dd.classList.remove('open'), 120); }
+  trigger.addEventListener('mouseenter', open);
+  trigger.addEventListener('mouseleave', close);
+  dd.querySelector('.nav-dd-menu').addEventListener('mouseenter', open);
+  dd.querySelector('.nav-dd-menu').addEventListener('mouseleave', close);
+  trigger.addEventListener('click', () => dd.classList.toggle('open'));
+  document.addEventListener('click', e => { if (!dd.contains(e.target)) dd.classList.remove('open'); });
+})();
+</script>
 
 </body>
 </html>
