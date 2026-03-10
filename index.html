@@ -392,7 +392,7 @@ footer{background:var(--ink);padding:42px 0 0}
       <div class="hero-trust">
         <span>No account required to start</span>
         <span>No student data stored</span>
-        <span>Works inside Google Docs</span>
+        <span>Works inside Google Classroom documents</span>
         <span>Built by a teacher</span>
       </div>
     </div>
@@ -412,28 +412,28 @@ footer{background:var(--ink);padding:42px 0 0}
       </div>
 
       <div class="hero-preview-card" onclick="heroOpenCard('stylematch')" role="button" tabindex="0" aria-label="Learn more about StyleMatch">
-        <div class="hpc-icon">✍️</div>
+        <div class="hpc-icon">🔍</div>
         <div style="flex:1">
           <div class="hpc-title">StyleMatch &nbsp;<span style="color:var(--gold-dk);font-size:11.5px">$4.99/mo</span></div>
-          <div class="hpc-desc">Compares two writing samples — in-class vs. submitted — using six stylometric metrics to assess whether the same person wrote both.</div>
+          <div class="hpc-desc">Compares a controlled writing sample against submitted work across eight research-based stylometric metrics to assess authorship consistency.</div>
           <ul class="hpc-bullets">
-            <li>Function word profile, punctuation fingerprint, sentence rhythm</li>
-            <li>Paste comparison &amp; struggle point analysis built in</li>
-            <li>CONSISTENT / CAUTION / FLAGGED verdict</li>
+            <li>Function words, punctuation fingerprint, sentence rhythm &amp; more</li>
+            <li>Struggle moments visible on the revision timeline</li>
+            <li>Divergence ratings: Similar / Notable / Divergent per metric</li>
             <li>Printable report — all analysis stays in your browser</li>
           </ul>
         </div>
       </div>
 
       <div class="hero-preview-card" onclick="heroOpenCard('verify')" role="button" tabindex="0" aria-label="Learn more about Verify">
-        <div class="hpc-icon">📊</div>
+        <div class="hpc-icon">🔬</div>
         <div style="flex:1">
           <div class="hpc-title">Verify &nbsp;<span style="color:var(--teal);font-size:11.5px">From $0.60/report</span></div>
-          <div class="hpc-desc">Builds on Inspect &amp; StyleMatch data to produce a formal, AI-assisted report for institutional conversations.</div>
+          <div class="hpc-desc">AI-assisted deep analysis — checks internal consistency within one essay, or compares it against a controlled sample across ten dimensions.</div>
           <ul class="hpc-bullets">
-            <li>Synthesizes revision history, paste events &amp; stylometric signals</li>
-            <li>Two report styles: Summary and Full Documentation</li>
-            <li>Structured findings: summary, signals, recommendation</li>
+            <li>Consistency Report: chunks essay into segments, scores 6 dimensions each</li>
+            <li>Baseline Deviation Report: 10-dimension comparison vs. controlled sample</li>
+            <li>Suggests follow-up questions and next steps for the student conversation</li>
             <li>No text retained — credits never expire</li>
           </ul>
         </div>
@@ -580,7 +580,7 @@ footer{background:var(--ink);padding:42px 0 0}
               <a href="https://chromewebstore.google.com/detail/papertrail/kgkjmhfoijiiplbmablcjbooopndjbgm"
                  class="btn btn-blue btn-full" target="_blank" rel="noopener" onclick="event.stopPropagation()">&#11015; Add to Chrome — Free</a>
             </div>
-            <div class="exp-disclaimer">Inspect reads Google Docs revision metadata. Requires Editor or Owner access to the document. No document content is stored or transmitted.</div>
+            <div class="exp-disclaimer">Inspect reads Google Classroom document revision metadata. Requires Editor or Owner access to the document. No document content is stored or transmitted.</div>
           </div>
         </div>
       </div>
@@ -591,18 +591,18 @@ footer{background:var(--ink);padding:42px 0 0}
         <div class="pcard-stripe stripe-gold"></div>
         <div class="pcard-top">
           <div style="display:flex;gap:7px;flex-wrap:wrap;margin-bottom:11px">
-            <span class="pcard-badge badge-gold">✍️ StyleMatch</span>
-            <span class="pcard-badge" style="background:#f3e8ff;color:#6d28d9">Plus</span>
+            <span class="pcard-badge badge-gold">🔍 StyleMatch</span>
+            <span class="pcard-badge" style="background:#f3e8ff;color:#6d28d9">Subscription</span>
           </div>
-          <h3>Who wrote it?</h3>
+          <h3>Does the writing match?</h3>
           <p class="card-tagline">"This doesn't sound like them."</p>
-          <p class="card-desc">Compare two writing samples using six peer-reviewed stylometric metrics — all computed locally. No text is ever transmitted anywhere.</p>
+          <p class="card-desc">Compare a controlled writing sample against submitted work using eight research-based stylometric metrics — all computed locally in your browser. No text is ever transmitted.</p>
         </div>
         <div class="pcard-features">
           <ul>
-            <li>Function word profile (Burrows' Delta)</li>
-            <li>Punctuation fingerprint + sentence rhythm</li>
-            <li>CONSISTENT / CAUTION / FLAGGED verdict</li>
+            <li>Eight research-based metrics including function words &amp; discourse markers</li>
+            <li>Struggle moments visible on the revision timeline</li>
+            <li>Divergence ratings per metric: Similar / Notable / Divergent</li>
             <li>Printable PDF report with research citations</li>
           </ul>
         </div>
@@ -616,50 +616,50 @@ footer{background:var(--ink);padding:42px 0 0}
           <div class="exp-left">
             <div class="sm-mock">
               <div class="sm-head">
-                <span class="sm-head-title">✍️ StyleMatch Report — J. Martinez</span>
-                <span class="verdict-badge vc">⚠ CAUTION</span>
+                <span class="sm-head-title">🔍 StyleMatch — Authorship Consistency Report</span>
               </div>
               <div class="sm-body">
                 <div class="sm-score-row">
                   <div>
-                    <div class="sm-score-n">61</div>
-                    <div class="sm-score-lbl">Composite Score<br><span style="color:var(--yellow);font-weight:700">CAUTION (50–74)</span></div>
+                    <div style="font-size:10px;color:rgba(255,255,255,.7);margin-bottom:2px">Controlled: 847 words · Submitted: 1,204 words</div>
+                    <div style="font-size:11px;font-weight:700;color:#fff">J. Martinez · Nov 14, 2025</div>
                   </div>
-                  <div class="sm-score-meta">Sample A: 847 words<br>Sample B: 1,204 words<br>Nov 14, 2025</div>
                 </div>
-                <div class="sm-meter"><div class="sm-meter-fill" style="width:61%"></div></div>
-                <div class="sm-metrics">
-                  <div class="sm-row"><span class="sm-name">Function Words</span><div class="sm-bar-wrap"><div class="sm-bar bm" style="width:58%"></div></div><span class="sm-val">58</span></div>
-                  <div class="sm-row"><span class="sm-name">Punctuation</span><div class="sm-bar-wrap"><div class="sm-bar bh" style="width:78%"></div></div><span class="sm-val">78</span></div>
-                  <div class="sm-row"><span class="sm-name">Sent. Length (avg)</span><div class="sm-bar-wrap"><div class="sm-bar bm" style="width:64%"></div></div><span class="sm-val">64</span></div>
-                  <div class="sm-row"><span class="sm-name">Sent. Rhythm (SD)</span><div class="sm-bar-wrap"><div class="sm-bar bl" style="width:42%"></div></div><span class="sm-val">42</span></div>
-                  <div class="sm-row"><span class="sm-name">Type-Token Ratio</span><div class="sm-bar-wrap"><div class="sm-bar bm" style="width:55%"></div></div><span class="sm-val">55</span></div>
-                  <div class="sm-row"><span class="sm-name">FK Grade Level</span><div class="sm-bar-wrap"><div class="sm-bar bh" style="width:82%"></div></div><span class="sm-val">82</span></div>
-                  <div class="sm-row"><span class="sm-name">Informality Markers</span><div class="sm-bar-wrap"><div class="sm-bar bh" style="width:76%"></div></div><span class="sm-val">76</span></div>
+                <div class="sm-metrics" style="margin-top:4px">
+                  <div class="sm-row"><span class="sm-name">FK Grade Level</span><div class="sm-bar-wrap"><div class="sm-bar bh" style="width:92%"></div></div><span class="sm-val" style="font-size:8.5px;color:#a8f0c6">92% Similar</span></div>
+                  <div class="sm-row"><span class="sm-name">Type-Token Ratio</span><div class="sm-bar-wrap"><div class="sm-bar bh" style="width:87%"></div></div><span class="sm-val" style="font-size:8.5px;color:#a8f0c6">87% Similar</span></div>
+                  <div class="sm-row"><span class="sm-name">Avg Sentence Length</span><div class="sm-bar-wrap"><div class="sm-bar bh" style="width:81%"></div></div><span class="sm-val" style="font-size:8.5px;color:#a8f0c6">81% Similar</span></div>
+                  <div class="sm-row"><span class="sm-name">Punctuation</span><div class="sm-bar-wrap"><div class="sm-bar bh" style="width:82%"></div></div><span class="sm-val" style="font-size:8.5px;color:#a8f0c6">82% Similar</span></div>
+                  <div class="sm-row"><span class="sm-name">Informality Markers</span><div class="sm-bar-wrap"><div class="sm-bar bh" style="width:98%"></div></div><span class="sm-val" style="font-size:8.5px;color:#a8f0c6">98% Similar</span></div>
+                  <div class="sm-row"><span class="sm-name">Sent. Rhythm (SD)</span><div class="sm-bar-wrap"><div class="sm-bar bm" style="width:68%"></div></div><span class="sm-val" style="font-size:8.5px;color:var(--yellow)">68% Notable</span></div>
+                  <div class="sm-row"><span class="sm-name">Discourse Markers</span><div class="sm-bar-wrap"><div class="sm-bar bl" style="width:43%"></div></div><span class="sm-val" style="font-size:8.5px;color:#ff8a80">43% Divergent</span></div>
+                  <div class="sm-row"><span class="sm-name">Function Words</span><div class="sm-bar-wrap"><div class="sm-bar bl" style="width:3%"></div></div><span class="sm-val" style="font-size:8.5px;color:#ff8a80">3% Divergent</span></div>
                 </div>
                 <div class="sm-note">⚠ Analytical data point — not a finding of fact. Educator judgment required. Not suitable as sole basis for any disciplinary action.</div>
               </div>
             </div>
           </div>
           <div class="exp-right">
-            <h4>Six metrics. Research-backed. Entirely private.</h4>
+            <h4>Eight metrics. Research-backed. Entirely private.</h4>
             <ul class="exp-features">
-              <li><strong>Function Word Profile (35%)</strong> — Burrows' Delta; cosine similarity over 30 most common function words</li>
-              <li><strong>Punctuation Fingerprint (20%)</strong> — comma, semicolon, em-dash rates per 1,000 characters</li>
-              <li><strong>Sentence Length + Rhythm (15%)</strong> — average and standard deviation; Coh-Metrix methodology</li>
-              <li><strong>Type-Token Ratio (15%)</strong> — vocabulary richness; stable per individual writer</li>
-              <li><strong>Flesch-Kincaid Grade Level (10%)</strong> — reading complexity consistency</li>
-              <li><strong>Informality Markers (5%)</strong> — contraction rate and first-person pronoun use</li>
-              <li>All computation runs locally — no text is ever transmitted</li>
-              <li>Minimum 500 words per sample for reliable results</li>
-              <li>Printable PDF report with full research citations</li>
+              <li><strong>Grammatical Function Words</strong> — Burrows' Delta over 30 core function words; among the most stable authorship signals</li>
+              <li><strong>Discourse Marker Profile</strong> — Burrows' Delta over 29 connectives &amp; stance markers; reflects reasoning habits</li>
+              <li><strong>Punctuation Fingerprint</strong> — comma, semicolon, dash, colon, !, ? rates per 1,000 characters</li>
+              <li><strong>Avg Sentence Length</strong> — characteristic length that persists across writing tasks</li>
+              <li><strong>Sentence Rhythm (SD)</strong> — standard deviation of lengths; captures varied vs. uniform rhythm</li>
+              <li><strong>Type-Token Ratio</strong> — vocabulary range; interpreted cautiously across different text lengths</li>
+              <li><strong>Flesch-Kincaid Grade Level</strong> — reading complexity; stable across tasks for the same writer</li>
+              <li><strong>Informality Markers</strong> — contraction rate &amp; first-person pronoun rate</li>
+              <li>Struggle moments identified on the revision timeline</li>
+              <li>All computation runs locally — no text ever transmitted</li>
+              <li>Minimum 500 words per sample required</li>
             </ul>
             <div class="exp-price-row">
               <div class="exp-price-big">$4.99<span style="font-size:15px;font-weight:400;color:var(--ink-3)">/month</span></div>
               <div class="exp-price-sub">or $49.99/year — save 17%</div>
               <a href="#pricing" class="btn btn-gold btn-full" onclick="event.stopPropagation();_close(true)">See full pricing ↓</a>
             </div>
-            <div class="exp-disclaimer">StyleMatch is a probabilistic tool. Genre-constrained writing (lab reports, TOK essays) may show inflated similarity scores. Always apply professional judgment. Reports include a mandatory disclaimer.</div>
+            <div class="exp-disclaimer">StyleMatch is a probabilistic tool. Genre-constrained writing (lab reports, TOK essays) may show inflated similarity on some metrics. Always apply professional judgment. All reports include a mandatory disclaimer.</div>
           </div>
         </div>
       </div>
@@ -670,69 +670,86 @@ footer{background:var(--ink);padding:42px 0 0}
         <div class="pcard-stripe stripe-teal"></div>
         <div class="pcard-top">
           <div style="display:flex;gap:7px;flex-wrap:wrap;margin-bottom:11px">
-            <span class="pcard-badge badge-teal">📊 Verify</span>
-            <span class="pcard-badge" style="background:#e8f4f1;color:var(--teal)">Credits</span>
+            <span class="pcard-badge badge-teal">🔬 Verify</span>
+            <span class="pcard-badge" style="background:#e8f4f1;color:var(--teal)">Two report types</span>
           </div>
-          <h3>Can I document it?</h3>
-          <p class="card-tagline">"I need something I can hand to my department head."</p>
-          <p class="card-desc">AI-assisted deep analysis that produces a structured, printable report designed for formal documentation and institutional conversations.</p>
+          <h3>How consistent is the writing?</h3>
+          <p class="card-tagline">"I need something I can bring to administration."</p>
+          <p class="card-desc">AI-assisted deep stylometric analysis — examine internal consistency within a single essay, or compare it against a controlled writing sample across ten research-grounded dimensions.</p>
         </div>
         <div class="pcard-features">
           <ul>
-            <li>AI-assisted narrative analysis</li>
-            <li>Structured printable report</li>
-            <li>No text retained after analysis</li>
-            <li>Pay-per-report — credits never expire</li>
+            <li>Consistency Report: chunks essay into segments, scores 6 dimensions each</li>
+            <li>Baseline Deviation Report: 10-dimension comparison vs. controlled sample</li>
+            <li>AI-suggested follow-up questions for the student conversation</li>
+            <li>Printable PDF — no text retained after analysis</li>
           </ul>
         </div>
         <div class="pcard-footer">
           <div class="price-line"><span class="price-big">$6</span><span class="price-unit">— 10 reports (starter)</span></div>
           <a href="#pricing" class="btn btn-teal btn-full" onclick="event.stopPropagation();_close(true)">See credit packs</a>
-          <p class="expand-hint">Click card to see sample report ↓</p>
+          <p class="expand-hint">Click card to see sample reports ↓</p>
         </div>
 
         <div class="pcard-expanded">
           <div class="exp-left">
-            <div class="vfy-mock">
-              <div class="vfy-head">
-                <span class="vfy-head-title">📊 Verify Report — Essay #7, S. Okonkwo</span>
+            <!-- Consistency Report mini-mock -->
+            <div class="vfy-mock" style="margin-bottom:12px">
+              <div class="vfy-head" style="padding:8px 12px">
+                <span class="vfy-head-title">🔬 Consistency Report — S. Okonkwo</span>
+                <span style="font-size:9px;font-weight:700;background:#e8f5e9;color:#1b5e20;padding:2px 8px;border-radius:10px">78 · Consistent</span>
               </div>
-              <div class="vfy-body">
-                <div class="vfy-section">
-                  <div class="vfy-sec-label">Summary Finding</div>
-                  <div class="vfy-finding">The submitted essay presents notable stylistic inconsistencies relative to the student's prior work. Structural complexity and vocabulary level exceed the baseline from this semester's class writing samples.</div>
+              <div class="vfy-body" style="padding:10px 12px">
+                <div class="vfy-sec-label" style="margin-bottom:6px">Stylometric Heatmap — 29 chunks · 0 flagged</div>
+                <div style="display:flex;flex-wrap:wrap;gap:3px;margin-bottom:8px">
+                  <div style="width:14px;height:14px;border-radius:3px;background:#e8f5e9;border:1px solid #c8e6c9;font-size:7px;display:flex;align-items:center;justify-content:center;color:#2e7d32;font-weight:700">1</div>
+                  <div style="width:14px;height:14px;border-radius:3px;background:#e8f5e9;border:1px solid #c8e6c9;font-size:7px;display:flex;align-items:center;justify-content:center;color:#2e7d32;font-weight:700">2</div>
+                  <div style="width:14px;height:14px;border-radius:3px;background:#e8f5e9;border:1px solid #c8e6c9;font-size:7px;display:flex;align-items:center;justify-content:center;color:#2e7d32;font-weight:700">3</div>
+                  <div style="width:14px;height:14px;border-radius:3px;background:#e8f5e9;border:1px solid #c8e6c9;font-size:7px;display:flex;align-items:center;justify-content:center;color:#2e7d32;font-weight:700">4</div>
+                  <div style="width:14px;height:14px;border-radius:3px;background:#e8f5e9;border:1px solid #c8e6c9;font-size:7px;display:flex;align-items:center;justify-content:center;color:#2e7d32;font-weight:700">5</div>
+                  <div style="width:14px;height:14px;border-radius:3px;background:#e8f5e9;border:1px solid #c8e6c9;font-size:7px;display:flex;align-items:center;justify-content:center;color:#2e7d32;font-weight:700">6</div>
+                  <div style="width:14px;height:14px;border-radius:3px;background:#e8f5e9;border:1px solid #c8e6c9;font-size:7px;display:flex;align-items:center;justify-content:center;color:#2e7d32;font-weight:700">7</div>
+                  <div style="width:14px;height:14px;border-radius:3px;background:#e8f5e9;border:1px solid #c8e6c9;font-size:7px;display:flex;align-items:center;justify-content:center;color:#2e7d32;font-weight:700">8</div>
                 </div>
-                <div class="vfy-divider"></div>
-                <div class="vfy-section">
-                  <div class="vfy-sec-label">Signals Detected</div>
-                  <div class="vfy-signals">
-                    <div class="vfy-signal"><div class="vfy-sig-dot" style="background:var(--red)"></div><span>Vocabulary complexity significantly above prior samples (FK Grade 11.4 vs. avg 8.2)</span></div>
-                    <div class="vfy-signal"><div class="vfy-sig-dot" style="background:var(--red)"></div><span>1,847 words submitted; 14 total edits over 6 minutes</span></div>
-                    <div class="vfy-signal"><div class="vfy-sig-dot" style="background:var(--yellow)"></div><span>Two high-novelty paste events (74% and 91% novel content)</span></div>
-                    <div class="vfy-signal"><div class="vfy-sig-dot" style="background:var(--yellow)"></div><span>No struggle moments detected — atypical for a complex argument essay</span></div>
-                    <div class="vfy-signal"><div class="vfy-sig-dot" style="background:var(--green)"></div><span>Document opened and edited on a single occasion</span></div>
-                  </div>
+                <div style="display:flex;flex-direction:column;gap:4px">
+                  <div style="display:flex;justify-content:space-between;font-size:8.5px;color:var(--ink-3)"><span>Register</span><span style="font-weight:700;color:var(--ink-2)">5.6 / 10</span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:8.5px;color:var(--ink-3)"><span>Vocabulary</span><span style="font-weight:700;color:var(--ink-2)">5.8 / 10</span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:8.5px;color:var(--ink-3)"><span>Argument Depth</span><span style="font-weight:700;color:var(--ink-2)">6.0 / 10</span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:8.5px;color:var(--ink-3)"><span>Error Density</span><span style="font-weight:700;color:var(--green)">7.5 / 10</span></div>
                 </div>
-                <div class="vfy-divider"></div>
-                <div class="vfy-section">
-                  <div class="vfy-sec-label">Recommendation</div>
-                  <div class="vfy-finding" style="border-left-color:var(--yellow)">Consider requesting an in-class writing sample on the same topic for stylometric comparison. Professional judgment required — this is an analytical data point, not a finding of fact.</div>
+              </div>
+            </div>
+            <!-- Baseline Deviation mini-mock -->
+            <div class="vfy-mock">
+              <div class="vfy-head" style="padding:8px 12px">
+                <span class="vfy-head-title">🔬 Baseline Deviation — S. Okonkwo</span>
+                <span style="font-size:9px;font-weight:700;background:#fce8e6;color:#c62828;padding:2px 8px;border-radius:10px">2 Anomalous</span>
+              </div>
+              <div class="vfy-body" style="padding:10px 12px">
+                <div style="display:flex;gap:8px;margin-bottom:8px">
+                  <div style="flex:1;text-align:center;padding:6px;background:#fce8e6;border-radius:6px"><div style="font-size:16px;font-weight:700;color:var(--red)">2</div><div style="font-size:8px;font-weight:700;color:var(--red);text-transform:uppercase">Anomalous</div></div>
+                  <div style="flex:1;text-align:center;padding:6px;background:#fff8e1;border-radius:6px"><div style="font-size:16px;font-weight:700;color:#e65100">2</div><div style="font-size:8px;font-weight:700;color:#e65100;text-transform:uppercase">Notable</div></div>
+                  <div style="flex:1;text-align:center;padding:6px;background:#e8f5e9;border-radius:6px"><div style="font-size:16px;font-weight:700;color:var(--green)">6</div><div style="font-size:8px;font-weight:700;color:var(--green);text-transform:uppercase">Within Range</div></div>
                 </div>
-                <div class="vfy-meta">PaperTrail Verify · Anthropic Claude API · Text not retained · Report ID: VFY-2025-1114-0091</div>
+                <div class="vfy-signals">
+                  <div class="vfy-signal"><div class="vfy-sig-dot" style="background:var(--red)"></div><span>Function Word Distribution — 43/100 similarity</span></div>
+                  <div class="vfy-signal"><div class="vfy-sig-dot" style="background:var(--red)"></div><span>Error &amp; Mechanics Fingerprint — characteristic errors absent</span></div>
+                  <div class="vfy-signal"><div class="vfy-sig-dot" style="background:var(--yellow)"></div><span>Syntactic Patterning — notable shift in sentence openings</span></div>
+                </div>
               </div>
             </div>
           </div>
           <div class="exp-right">
-            <h4>A report you can stand behind</h4>
+            <h4>Two reports. Ten dimensions. One conversation.</h4>
             <ul class="exp-features">
-              <li>AI-assisted narrative analysis of the submitted writing sample</li>
-              <li>Cross-references revision history data from Inspect</li>
-              <li>Structured findings — summary, signals, recommendation</li>
-              <li>Designed to support a formal conversation with administration or parents</li>
-              <li>Submitted text processed securely — not retained after analysis</li>
-              <li>Powered by Anthropic Claude API; terms prohibit training on submitted content</li>
+              <li><strong>Consistency Report</strong> — analyses a single essay in 29 chunks across Register, Vocabulary, Sentence Complexity, Argument Depth, Error Density, and Cohesion. Produces a heatmap and writer baseline profile.</li>
+              <li><strong>Baseline Deviation Report</strong> — compares submitted work against a controlled sample across 10 dimensions: Function Word Distribution, Orthographic Habits, Punctuation Micro-Patterns, Syntactic Complexity, Syntactic Patterning, Cohesive Device Profile, Error &amp; Mechanics Fingerprint, Nominal vs. Verbal Style, Phrase Recurrence, and Lexical Diversity.</li>
+              <li>Each dimension rated: Anomalous / Notable / Within Range</li>
+              <li>AI-generated recommended next steps and suggested follow-up questions for the student conversation</li>
+              <li>Research citations included — 10 peer-reviewed sources</li>
+              <li>Printable PDF report with Report ID for institutional records</li>
+              <li>No text retained after analysis is complete</li>
               <li>Credits never expire — use when the situation calls for it</li>
-              <li>Report ID and timestamp for institutional recordkeeping</li>
             </ul>
             <div class="exp-price-row">
               <div class="exp-price-big">$0.60<span style="font-size:14px;font-weight:400;color:var(--ink-3)">/report</span></div>
@@ -754,7 +771,7 @@ footer{background:var(--ink);padding:42px 0 0}
     <div class="pricing-hdr">
       <p class="eyebrow">Pricing</p>
       <h2>Start free. <em>Upgrade when you need to.</em></h2>
-      <p>Inspect is free forever, no account required. StyleMatch Plus and Verify are for when the situation calls for more.</p>
+      <p>Inspect is free forever, no account required. StyleMatch and Verify are for when the situation calls for more.</p>
     </div>
     <div class="price-cols">
       <div class="price-col">
@@ -768,52 +785,52 @@ footer{background:var(--ink);padding:42px 0 0}
           <li>Paste detection + novelty scoring</li>
           <li>Struggle moment detection</li>
           <li>Revision playback</li>
-          <li>Deep writing metrics</li>
+          <li>Paste before/after comparison</li>
           <li class="na">StyleMatch authorship comparison</li>
-          <li class="na">Verify AI reports</li>
+          <li class="na">Verify deep analysis reports</li>
         </ul>
         <a href="https://chromewebstore.google.com/detail/papertrail/kgkjmhfoijiiplbmablcjbooopndjbgm"
            class="btn btn-blue btn-full" target="_blank" rel="noopener">&#11015; Add to Chrome — Free</a>
       </div>
       <div class="price-col featured">
-        <span class="pcard-badge" style="align-self:flex-start;background:rgba(255,255,255,.18);color:#fff">✍️ StyleMatch Plus</span>
-        <h3>Plus</h3>
-        <p class="price-sub-lbl">Authorship analysis</p>
+        <span class="pcard-badge" style="align-self:flex-start;background:rgba(255,255,255,.18);color:#fff">🔍 StyleMatch</span>
+        <h3>Subscription</h3>
+        <p class="price-sub-lbl">Authorship consistency analysis</p>
         <div class="big-price"><span class="n">$4.99</span><span class="u">/month</span></div>
         <p class="price-alt">or $49.99/year — save 17%</p>
         <ul class="price-feats">
-          <li>Everything in Free</li>
-          <li>StyleMatch authorship comparison</li>
-          <li>Six stylometric metrics</li>
-          <li>CONSISTENT / CAUTION / FLAGGED verdict</li>
-          <li>Printable PDF report</li>
+          <li>Everything in Inspect</li>
+          <li>Eight research-based stylometric metrics</li>
+          <li>Controlled vs. submitted comparison</li>
+          <li>Divergence ratings per metric</li>
+          <li>Struggle moments on revision timeline</li>
+          <li>Printable PDF with research citations</li>
           <li>Auto-fill from open document</li>
-          <li>Research citations in report</li>
-          <li class="na">Verify AI-assisted reports</li>
+          <li class="na">Verify deep analysis reports</li>
         </ul>
-        <a href="#" class="btn btn-gold btn-full">Get StyleMatch Plus</a>
+        <a href="#" class="btn btn-gold btn-full">Get StyleMatch</a>
       </div>
       <div class="price-col">
-        <span class="pcard-badge badge-teal" style="align-self:flex-start">📊 Verify</span>
+        <span class="pcard-badge badge-teal" style="align-self:flex-start">🔬 Verify</span>
         <h3>Pay per report</h3>
-        <p class="price-sub-lbl">Formal documentation</p>
+        <p class="price-sub-lbl">Deep AI-assisted analysis</p>
         <div class="big-price"><span class="n">$0.60</span><span class="u">/report</span></div>
         <p class="price-alt">Starter: 10 reports for $6</p>
         <ul class="price-feats">
-          <li>Everything in Free</li>
-          <li>AI-assisted narrative analysis</li>
-          <li>Structured printable report</li>
-          <li>For formal documentation</li>
-          <li>No text retained after analysis</li>
-          <li>Credits never expire</li>
-          <li class="na">StyleMatch included separately</li>
+          <li>Everything in Inspect</li>
+          <li>Consistency Report — 6 dimensions, 29-chunk heatmap</li>
+          <li>Baseline Deviation Report — 10 dimensions vs. controlled sample</li>
+          <li>Anomalous / Notable / Within Range per dimension</li>
+          <li>AI-suggested follow-up questions</li>
+          <li>Printable PDF with 10 research citations</li>
+          <li>No text retained — credits never expire</li>
         </ul>
         <a href="#" class="btn btn-teal btn-full">Buy Verify Credits</a>
       </div>
     </div>
 
     <div class="packs-wrap">
-      <div class="packs-label">📊 Verify Credit Packs</div>
+      <div class="packs-label">🔬 Verify Credit Packs</div>
       <div class="packs-sublabel">Credits never expire. Use as the situation calls for it — no subscription required.</div>
       <div class="packs-row">
         <div class="pack">
